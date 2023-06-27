@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>О системах контроля версий</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Montserrat.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/Codeblock.css">
+    <link rel="stylesheet" href="assets/css/One-Liner-Code-Editor.css">
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 0px;padding-right: 32px;"><span style="background: url(&quot;assets/img/Logo_for_website_0.png&quot;) center / cover no-repeat;min-width: 48px;min-height: 48px;max-height: 48px;max-width: 48px;margin-right: 15px;"></span><span>ССКР</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-xxl-flex" id="navcol-1">
+                <ul class="navbar-nav d-xxl-flex ms-auto align-items-lg-center align-items-xl-center align-items-xxl-center">
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-lg-center text-xl-center text-xxl-center" aria-expanded="false" data-bs-toggle="dropdown" href="#">Системы контроля версий</a>
+                        <div class="dropdown-menu" style="border-style: none;"><a class="dropdown-item" href="vcs.html">О системах контроля версий</a><a class="dropdown-item" href="about-git.html">О Git</a><a class="dropdown-item" href="git-install.html">Установка Git</a></div>
+                    </li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link" href="CI-CD.html">Системы непрерывной интеграции</a></li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link" href="pms.html">Системы управления проектами</a></li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link" href="cloud-services.html">Облачные технологии</a></li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link" href="about-us.html">О сайте</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page blog-post-list" style="padding-top: 120px;background: rgb(246,246,246);">
+        <section class="clean-block clean-blog-list dark">
+            <div class="container" style="padding-top: 20px;">
+                <div class="block-content" style="padding-right: 40px;padding-left: 40px;padding-top: 80px;">
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info" style="margin-bottom: 20px;">Что такое системы контроля версий?</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Стоит начать с определения <em>системы контроля версий (СКВ)</em> — это система, регистрирующая изменения в одном или нескольких файлах с тем, чтобы в дальнейшем была возможность вернуться к определённым старым версиям этих файлов.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Представим, что программист разрабатывает проект состоящий из одного небольшого файла (кстати, пример вполне реальный, не синтетический, встречался в реальной жизни). После выпуска первой версии проекта перед ним встает непростой выбор: необходимо исправлять проблемы о которых сообщают пользователи первой версии и, в тоже время, разрабатывать что-то новое для второй. Даже если надо просто исправлять возникающие проблемы, то велика вероятность, что после какого-либо изменения проект перестает работать, и надо определить, что было изменено, чтобы было проще локализовать проблему. Также желательно вести какой-то журнал внесенных изменений и исправлений, чтобы не делать несколько раз одну и ту же работу.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">В простейшем случае вышеприведенную проблему можно решить хранением нескольких копий файлов, например, один для исправления ошибок в первой версии проекта и второй для новых изменений. Так как изменения обычно не очень большие по сравнению с размером файла, то можно хранить только измененные строки используя утилиту diff и позже объединять их с помощью утилиты patch. Но что если проект состоит из нескольких тысяч файлов и над ним работает сотня человек? Если в этом случае использовать метод с хранением отдельных копий файлов (или даже только изменений), то проект застопорится очень быстро.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Система контроля версий даёт возможность возвращать отдельные файлы к прежнему виду, возвращать к прежнему состоянию весь проект, просматривать происходящие со временем изменения, определять, кто последним вносил изменения во внезапно переставший работать модуль, кто и когда внёс в код какую-то ошибку, и многое другое.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Локальные системы контроля версий</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Один из примеров локальной СУВ предельно прост: многие предпочитают контролировать версии, просто копируя файлы в другой каталог (как правило добавляя текущую дату к названию каталога). Такой подход очень распространён, потому что прост, но он и чаще даёт сбои.&nbsp;Чтобы решить эту проблему, программисты уже давно разработали локальные СКВ с простой базой данных, в которой хранятся все изменения нужных файлов.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Одной из наиболее популярных СКВ такого типа является RCS (Revision Control System, Система контроля ревизий), которая до сих пор устанавливается на многие компьютеры. Даже в современной операционной системе Mac OS X утилита rcs устанавливается вместе с Developer Tools. RCS была разработана в начале 1980-х годов Вальтером Тичи (Walter F. Tichy). Система позволяет хранить версии только одного файла, таким образом управлять несколькими файлами приходится вручную. Для каждого файла находящегося под контролем системы информация о версиях хранится в специальном файле с именем оригинального файла к которому в конце добавлены символы ',v'. Например для файла file.txt версии будут храниться в файле file.txt,v. Эта утилита основана на работе с наборами патчей между парами версий (патч — файл, описывающий различие между файлами). Это позволяет пересоздать любой файл на любой момент времени, последовательно накладывая патчи. Для хранения версий система использует утилиту diff. Хотя RCS соответствует минимальным требованиям к системе контроля версий она имеет следующие основные недостатки, которые также послужили стимулом для создания следующей рассматриваемой системы:</p>
+                        <ul style="text-align: justify;color: var(--bs-gray-800);padding-bottom: 0px;margin-bottom: 0px;">
+                            <li style="padding-bottom: 5px;">Работа только с одним файлом, каждый файл должен контролироваться отдельно;</li>
+                            <li style="padding-bottom: 5px;">Неудобный механизм одновременной работы нескольких пользователей с системой, хранилище просто блокируется пока заблокировавший его пользователь не разблокирует его;</li>
+                            <li>От бекапов пользователя никто не освобождает, он рискует потерять всё.</li>
+                        </ul>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Централизованные системы контроля версий</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Следующей основной проблемой оказалась необходимость сотрудничать с разработчиками за другими компьютерами. Чтобы решить её, были созданы <em>централизованные системы контроля версий (ЦСКВ)</em>. В таких системах, например CVS, Subversion и Perforce, есть центральный сервер, на котором хранятся все файлы под версионным контролем, и ряд клиентов, которые получают копии файлов из него. Много лет это было стандартом для систем контроля версий.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Такой подход имеет множество преимуществ, особенно над локальными СКВ. К примеру, все знают, кто и чем занимается в проекте. У администраторов есть чёткий контроль над тем, кто и что может делать, и, конечно, администрировать ЦСКВ намного легче, чем локальные базы на каждом клиенте. Однако при таком подходе есть и несколько серьёзных недостатков. Наиболее очевидный — централизованный сервер является уязвимым местом всей системы. Если сервер выключается на час, то в течение часа разработчики не могут взаимодействовать, и никто не может сохранить новой версии своей работы. Если же повреждается диск с центральной базой данных и нет резервной копии, то теряется абсолютно всё — вся история проекта, разве что за исключением нескольких рабочих версий, сохранившихся на рабочих машинах пользователей.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">CVS (Concurrent Versions System, Система совместных версий)</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><em>CVS (Concurrent Versions System, Система совместных версий)</em>&nbsp;пока остается самой широко используемой системой, но быстро теряет свою популярность из-за недостатков которые я рассмотрю ниже. Дик Грун (Dick Grune) разработал CVS в середине 1980-х. Для хранения индивидуальных файлов CVS (также как и RCS) использует файлы в RCS формате, но позволяет управлять группами файлов, расположенных в директориях. Также CVS использует клиент-сервер архитектуру, в которой вся информация о версиях хранится на сервере. Использование клиент-сервер архитектуры позволяет использовать CVS даже географически распределенным командами пользователей, где каждый пользователь имеет свой рабочий директорий с копией проекта. Как следует из названия, пользователи могут использовать систему совместно.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Возможные конфликты при изменении одного и того же файла разрешаются тем, что система позволяет вносить изменения только в самую последнюю версию файла. Таким образом всегда рекомендуется перед добавлением своих изменений обновлять свою рабочую копию файлов на случай возможных конфликтующих изменений. При обновлении система вносит изменения в рабочую копию автоматически и только в случае конфликтующих изменений в одном из мест файла требуется ручное исправление места конфликта.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">CVS также позволяет вести несколько линий разработки проекта с помощью ветвей (branches) разработки. Таким образом, как уже упоминалось выше, можно исправлять ошибки в первой версии проекта и параллельно разрабатывать новую функциональность.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">CVS использовалась большим количеством проектов, но не была лишена недостатков, которые позднее привели к появлению следующей рассматриваемой системы. Рассмотрим основные недостатки:</p>
+                        <ul style="text-align: justify;color: var(--bs-gray-800);padding-bottom: 0px;margin-bottom: 0px;padding-left: 20px;">
+                            <li style="padding-bottom: 5px;">Так как версии хранятся в файлах RCS, нет возможности сохранять версии директорий. Стандартный способ обойти это препятствие&nbsp;<span style="color: rgb(33, 37, 41);">—</span>&nbsp;это сохранить какой-либо файл (например, README.txt) в директории;</li>
+                            <li>Перемещение или переименование файлов не подвержено контролю версий. Стандартный способ сделать это: сначала скопировать файл, удалить старый с помощью команды "<em>cvs remove"</em> и затем добавить с его новым именем с помощью команды "<em>cvs add"</em>;</li>
+                        </ul>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">CVS Subversion</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Subversion (SVN) был разработан в 2000 году по инициативе фирмы CollabNet. SVN изначально разрабатывался как "лучший CVS" и основной задачей разработчиков было исправление ошибок допущенных в дизайне CVS при сохранении похожего интерфейса. SVN также как и CVS использует клиент-сервер архитектуру. Из наиболее значительных изменений по сравнению с CVS можно отметить:</p>
+                        <ul style="text-align: justify;color: var(--bs-gray-800);padding-bottom: 0px;margin-bottom: 0px;padding-left: 20px;">
+                            <li style="padding-bottom: 5px;">Атомарное внесение изменений (commit). В случае если обработка коммита была прервана не будет внесено никаких изменений.</li>
+                            <li style="padding-bottom: 5px;">Переименование, копирование и перемещение файлов сохраняет всю историю изменений.</li>
+                            <li style="padding-bottom: 5px;">Директории, символические ссылки и мета-данные подвержены контролю версий.</li>
+                            <li>Эффективное хранение изменений для бинарных файлов.</li>
+                        </ul>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Распределённые системы контроля версий</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">И в этой ситуации в игру вступают распределённые системы контроля версий (РСКВ). В таких системах как Git, Mercurial, Bazaar или Darcs клиенты не просто выгружают последние версии файлов, а полностью копируют весь репозиторий. Поэтому в случае, когда "умирает" сервер, через который шла работа, любой клиентский репозиторий может быть скопирован обратно на сервер, чтобы восстановить базу данных. Каждый раз, когда клиент забирает свежую версию файлов, он создаёт себе полную копию всех данных.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Кроме того, в большей части этих систем можно работать с несколькими удалёнными репозиториями, таким образом, можно одновременно работать по-разному с разными группами людей в рамках одного проекта. Так, в одном проекте можно одновременно вести несколько типов рабочих процессов, что невозможно в централизованных системах.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Зачем нужны распределенные системы?</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Как следует из названия, одна из основных идей распределенных систем — это отсутствие четко выделенного центрального хранилища версий&nbsp;— репозитория. В случае распределенных систем набор версий может быть полностью, или частично распределен между различными хранилищами, в том числе и удаленными. Такая модель отлично вписывается в работу распределенных команд, например, распределенной по всему миру команды разработчиков работающих над одним проектом с открытым исходным кодом. Разработчик такой команды может скачать себе всю информацию по версиям и после этого работать только на локальной машине. Как только будет достигнут результат одного из этапов работы изменения могут быть добавлены в один из центральных репозиториев или опубликованы для просмотра на сайте разработчика или в почтовой рассылке. Другие участники проекта, в свою очередь, смогут обновить свою копию хранилища версий новыми изменениями или попробовать опубликованные изменения на отдельной, тестовой ветке разработки.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">К сожалению, без хорошей организации проекта отсутствие одного центрального хранилища может быть минусом распределенных систем. Если в случае централизованных систем всегда есть один общий репозиторий, откуда можно получить последнюю версию проекта, то в случае распределенных систем нужно организационно решить какая из веток проекта будет основной. Почему распределенная система контроля версий может быть интересна кому-то, кто уже использует централизованную систему — такую как Subversion? Любая работа подразумевает принятие решений, и в большинстве случаев необходимо пробовать различные варианты: при работе с системами контроля версий для рассмотрения различных вариантов и работы над большими изменениями служат ветки разработки. И хотя это достаточно естественная концепция, пользоваться ей в Subversion достаточно непросто. Тем более, всё усложняется в случае множественных последовательных объединений с одной ветки на другую — в этом случае нужно безошибочно указывать начальные и конечные версии каждого изменения, чтобы избежать конфликтов и ошибок. Для распределенных систем контроля версий ветки разработки являются одной из основополагающих концепций — в большинстве случаев каждая копия хранилища версий является веткой разработки. Таким образом, механизм объединения изменений с одной ветки на другую в случае распределенных систем является одним из основных, что позволяет пользователям прикладывать меньше усилий при пользовании системой.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Краткое описание популярных распределенных СУВ</h2>
+                        <ul style="text-align: justify;padding-top: 5px;color: var(--bs-gray-800);padding-bottom: 0px;margin-bottom: 0px;padding-left: 20px;">
+                            <li style="padding-bottom: 5px;"><a href="https://git-scm.com/" style="color: var(--bs-link-color);" target="_blank">Git</a>&nbsp;— распределенная система контроля версий, разработанная Линусом Торвальдсом. Изначально Git предназначалась для использования в процессе разработки ядра Linux, но позже стала использоваться и во многих других проектах — таких, как, например, X.org и Ruby on Rails, Drupal. На данный момент Git является самой быстрой распределенной системой, использующей самое компактное хранилище ревизий. Но в тоже время для пользователей, переходящих, например, с Subversion, интерфейс Git может показаться сложным;</li>
+                            <li style="padding-bottom: 5px;"><a href="https://www.mercurial-scm.org/" style="color: var(--bs-link-color);" target="_blank">Mercurial</a>&nbsp;— распределенная система, написанная на языке Python с несколькими расширениями на C. Из использующих Mercurial проектов можно назвать Mozilla и MoinMoin.</li>
+                            <li style="padding-bottom: 5px;"><a href="https://bazaar.canonical.com/" style="color: var(--bs-link-color);" target="_blank">Bazaar</a>&nbsp;— система разработка которой поддерживается компанией Canonical — известной своими дистрибутивом Ubuntu и сайтом https://launchpad.net/. Система в основном написана на языке Python и используется такими проектами, как, например, MySQL.</li>
+                            <li style="padding-bottom: 5px;"><a href="http://codeville.org/" style="color: var(--bs-link-color);" target="_blank">Codeville</a>&nbsp;— написанная на Python распределенная система использующая инновационный алгоритм объединения изменений (merge). Система используется, например, при разработке оригинального клиента BitTorrent.</li>
+                            <li style="padding-bottom: 5px;"><a href="http://darcs.net/" style="color: var(--bs-link-color);" target="_blank">Darcs</a>&nbsp;— распределенная система контроля версий написанная на Haskell используемая, например, проектом Buildbot.</li>
+                            <li><a href="https://www.monotone.ca/" style="color: var(--bs-link-color);" target="_blank">Monotone</a>&nbsp;— система написанная на C++ и использующая SQLite как хранилище ревизий.</li>
+                        </ul>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Полезные материалы</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Что такое <a href="https://www.atlassian.com/ru/git/tutorials/what-is-version-control" target="_blank">контроль версий</a>?</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Что такое система&nbsp;<a href="https://unity.com/ru/solutions/what-is-version-control" target="_blank">контроля версий</a>?</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Что такое система&nbsp;<a href="https://liquidhub.ru/blogs/blog/sistema-kontrolya-versiy" target="_blank">контроля версий</a> и как ей пользоваться?</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;margin-bottom: 20px;">О системах&nbsp;<a href="https://habr.com/ru/companies/otus/articles/521290/" target="_blank">контроля версий</a>.</p>
+                        <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/qqP8eiVb17k" allowfullscreen=""></iframe></div>
+                        <div class="ratio ratio-4x3" style="margin-top: 10px;"><iframe src="assets/books/Лекция 01 Современные системы программирования.pdf" allowfullscreen=""></iframe></div>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Тест</h2>
+                        <div class="ratio ratio-1x1"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScujMYh-QmGFRpSikkpWiPk3bYeohINosilW3cB3K9MBD2x_Q/viewform?embedded=true" allowfullscreen=""></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-5 justify-content-center">
+                <div class="col text-center align-self-center" data-bs-target="#navcol-1"><a class="text-nowrap" href="mailto:cckpsite@gmail.com" target="_blank"><i class="fab fa-google" style="padding-right: 10px;"></i>cckpsite@gmail.com</a></div>
+                <div class="col text-center align-self-center"><a href="https://vk.com/syrtsovnv" target="_blank"><i class="fab fa-vk" style="padding-right: 10px;"></i>syrtsovnv</a></div>
+                <div class="col text-center align-self-center"><a href="https://t.me/syrtsovnv" target="_blank"><i class="fab fa-telegram-plane" style="padding-right: 10px;"></i>syrtsovnv</a></div>
+            </div>
+        </div>
+        <div class="footer-copyright" style="margin-top: 30px;">
+            <p>© Оформление сайта. Н. В. Сырцов, 2023</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/One-Liner-Code-Editor-codeeditor.js"></script>
+</body>
+
+</html>

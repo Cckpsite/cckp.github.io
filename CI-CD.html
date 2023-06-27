@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Системы непрерывной интеграции</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Montserrat.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/Codeblock.css">
+    <link rel="stylesheet" href="assets/css/One-Liner-Code-Editor.css">
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 0px;padding-right: 32px;"><span style="background: url(&quot;assets/img/Logo_for_website_0.png&quot;) center / cover no-repeat;min-width: 48px;min-height: 48px;max-height: 48px;max-width: 48px;margin-right: 15px;"></span><span>ССКР</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-xxl-flex" id="navcol-1">
+                <ul class="navbar-nav d-xxl-flex ms-auto align-items-lg-center align-items-xl-center align-items-xxl-center">
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-lg-center text-xl-center text-xxl-center" aria-expanded="false" data-bs-toggle="dropdown" href="#">Системы контроля версий</a>
+                        <div class="dropdown-menu" style="border-style: none;"><a class="dropdown-item" href="vcs.html">О системах контроля версий</a><a class="dropdown-item" href="about-git.html">О Git</a><a class="dropdown-item" href="git-install.html">Установка Git</a></div>
+                    </li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link active" href="CI-CD.html">Системы непрерывной интеграции</a></li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link" href="pms.html">Системы управления проектами</a></li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link" href="cloud-services.html">Облачные технологии</a></li>
+                    <li class="nav-item text-lg-center text-xl-center text-xxl-center"><a class="nav-link" href="about-us.html">О сайте</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page blog-post-list" style="padding-top: 120px;background: rgb(246,246,246);">
+        <section class="clean-block clean-blog-list dark">
+            <div class="container" style="padding-top: 20px;">
+                <div class="block-content" style="padding-right: 40px;padding-left: 40px;padding-top: 80px;">
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info" style="margin-bottom: 20px;">Системы непрерывной интеграции</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Непрерывная интеграция (<em>Continuous Integration, CI</em>) и непрерывная поставка (<em>Continuous Delivery, CD</em>) представляют собой культуру, набор принципов и практик, которые позволяют разработчикам чаще и надежнее развертывать изменения программного обеспечения.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Определение CI/CD</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><em>Непрерывная интеграция</em> — это методология разработки и набор практик, при которых в код вносятся небольшие изменения с частыми коммитами. И поскольку большинство современных приложений разрабатываются с использованием различных платформ и инструментов, то появляется необходимость в механизме интеграции и тестировании вносимых изменений.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">С технической точки зрения, цель CI — обеспечить последовательный и автоматизированный способ сборки, упаковки и тестирования приложений. При налаженном процессе непрерывной интеграции разработчики с большей вероятностью будут делать частые коммиты, что, в свою очередь, будет способствовать улучшению коммуникации и повышению качества программного обеспечения.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Инструменты CI/CD помогают настраивать специфические параметры окружения, которые конфигурируются при развертывании. А также CI/CD-автоматизация выполняет необходимые запросы к веб-серверам, базам данных и другим сервисам, которые могут нуждаться в перезапуске или выполнении каких-то дополнительных действий при развертывании приложения.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><em>Непрерывная поставка</em> — это автоматическое развертывание приложения в целевое окружение. Обычно разработчики работают с одним или несколькими окружениями разработки и тестирования, в которых приложение развертывается для тестирования и ревью. Для этого используются такие CI/CD-инструменты как Jenkins, CircleCI, AWS CodeBuild, Azure DevOps, Atlassian Bamboo, Travis CI.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Непрерывная интеграция и непрерывная поставка нуждаются в непрерывном тестировании, поскольку конечная цель — разработка качественных приложений. Непрерывное тестирование часто реализуется в виде набора различных автоматизированных тестов (регрессионных, производительности и других), которые выполняются в CI/CD-конвейере.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Преимущества непрерывной интеграции</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Непрерывная интеграция обеспечивает множество преимуществ, среди которых:</p>
+                        <ul style="text-align: justify;color: var(--bs-gray-800);padding-bottom: 0px;margin-bottom: 0px;padding-left: 20px;">
+                            <li style="padding-bottom: 5px;">Действительно раннее обнаружение проблем и исправление их до слияния кода.&nbsp;</li>
+                            <li style="padding-bottom: 5px;">Более короткие и менее напряженные интеграции.&nbsp;</li>
+                            <li style="padding-bottom: 5px;">Благодаря улучшению видимости повышается эффективность коммуникации. </li>
+                            <li style="padding-bottom: 5px;">На поиск багов и ошибок уходит меньше времени. </li>
+                            <li style="padding-bottom: 5px;">Больше не нужно ждать окончания тестирования кода. </li>
+                            <li style="padding-bottom: 5px;">Повышается эффективность быстрой доставки ПО. </li>
+                            <li style="padding-bottom: 5px;">Становится возможной непрерывная обратная связь об изменениях, что со временем может улучшить продукт. </li>
+                        </ul>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Ниже описаны&nbsp;основные системы непрерывной интеграции, используемые разработчиками, и особенности их работы. </p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Jenkins</h2><img class="img-fluid" src="assets/img/CD-CI/Jenkins.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://www.jenkins.io/" target="_blank">Jenkins</a>&nbsp;это инструмент непрерывной интеграции с открытым исходным кодом. Написан на Java.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Jenkins предоставляет возможность тестирования кода в режиме реального времени, а также дает возможность получать отчеты об отдельных изменениях в обширной кодовой базе. Этот инструмент, главным образом, позволяет разработчикам быстро помечать и исправлять ошибки и баги в коде, а затем автоматически тестировать сборку кода.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Благодаря интуитивному пользовательскому интерфейсу Jenkins очень легко настраивать и конфигурировать. Он доступен на операционных системах Linux, Macintosh и Windows. Jenkins создан для крупномасштабных интеграций, благодаря чему можно легко распределять работу между различными машинами. </p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Наличие больше 1000 плагинов позволяет автоматизировать практически что угодно. В результате члены вашей команды смогут посвятить свое время исключительно тем задачам, с которыми не способны справиться машины.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">TeamCity</h2><img class="img-fluid" src="assets/img/CD-CI/TeamCity.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://www.jetbrains.com/ru-ru/teamcity/" target="_blank">TeamCity</a>&nbsp;это сервер непрерывной интеграции корпоративного уровня. Он поддерживает большое количество мощного функционала, а также имеет очень надежную бесплатную версию для маленьких проектов (до 100 конфигураций сборки). Создан командой JetBrains.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Поставляется он с обширной поддержкой множества плагинов с открытым исходным кодом – как собственных продуктов JetBrains, так и сторонних приложений и инструментов. Также TeamCity предлагает потрясающую поддержку .NET.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Благодаря всему этому данный сервер непрерывной интеграции отличается высокой надежностью, не зависящей от запуска сборок. TeamCity имеет очень понятную интеграцию с системами контроля версий. Коммиты можно предварительно тестировать, а команды – запускать удаленно.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Travis CI</h2><img class="img-fluid" src="assets/img/CD-CI/Travis-CI.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://www.travis-ci.com/" target="_blank">Travis</a>&nbsp;это очень популярный инструмент непрерывной интеграции. Он бесплатен для проектов с открытым исходным кодом. Этот инструмент можно назвать не кроссплатформенным, а платформо-независимым, поскольку что это веб-ресурс.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Travis поддерживает много языков программирования, включая Node и PHP, а также много конфигураций сборки.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Этот инструмент поставляется с очень мощным API и интерфейсом командной строки. Его легко настраивать, а инсталлировать и вовсе не нужно. Travis интегрирован с такими сервисами коммуникации как Slack, HipChat и даже с электронной почтой. Для сборки приложений используются виртуальные машины. Допускается параллельное тестирование.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Gitlab CI</h2><img class="img-fluid" src="assets/img/CD-CI/GitLab_CI.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://docs.gitlab.com/ee/ci/" target="_blank">GitLab Continuous Integration</a>&nbsp;это часть GitLab. По сути это веб-приложение с API, сохраняющим его состояние в базе данных. Используется для менеджмента проектов и предоставляет дружественный к пользователю, интуитивный интерфейс, а также все другие преимущества функционала GitLab.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Gitlab CI поставляется с реестром образов Docker, который называется реестром контейнеров. С помощью Gitlab вы можете изменять метаданные merge-реквеста без команд slash в комментарии.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Circle CI</h2><img src="assets/img/CD-CI/Circle-CI.png" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://circleci.com/" target="_blank">Circle CI</a>&nbsp;это гибкий сервер непрерывной интеграции, запускаемый в любой среде: в кросс-платформенном мобильном приложении, Python API сервере или кластере Docker. Инструмент нацелен на обозначение багов и улучшение качества приложения в целом (в долгосрочной перспективе).</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Хорошо интегрируется с системами контроля версий, поддерживает много языков (JavaScript, C++, PHP, Python), а также Docker. Позволяет выбрать среду сборки, которая будет поставлена в виде бесплатной версии для ознакомления.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">GoCD</h2><img class="img-fluid" src="assets/img/CD-CI/GoCD.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://www.gocd.org/" target="_blank">GoCD</a>&nbsp;это сервер непрерывной интеграции, используется для моделирования и визуализации сложных рабочих процессов. GoCD также является инструментом непрерывной доставки, таким образом, это прекрасное решение для CI/CD процессов.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Несмотря на высокую степень безопасности, при обработке аутентификации и авторизации пользователей GoCD сохраняет чистое дерево конфигурации. Благодаря такому функционалу как value stream map GoCD позволяет визуализировать весь рабочий процесс в одном месте. GoCD имеет очень быстро растущее сообщество пользователей. Для этого сервера регулярно создаются и добавляются тысячи плагинов.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Bamboo</h2><img class="img-fluid" src="assets/img/CD-CI/Bamboo.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://www.atlassian.com/ru/software/bamboo" target="_blank">Bamboo</a>&nbsp;создан командой Atlassian – очень крупной компании, занимающейся созданием программ промышленного уровня. Это build-сервер непрерывной интеграции, осуществляющий сборку, тестирование и релизы. Он создан для поддержки его «сестринского» инструмента Jira от Atlassian и систем контроля версий. Bamboo поддерживает много языков программирования и технологий, например, AWS Buckets.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;">Этот инструмент имеет простой в использовании интерфейс. Он содержит встроенный git branching, а также интегрируется с HipChat. Сборки могут запускаться по мере обнаружения изменений в кодовой базе.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Codeship</h2><img class="img-fluid" src="assets/img/CD-CI/Codeship.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://www.cloudbees.com/products/codeship" target="_blank">Codeship</a>&nbsp;это популярный инструмент непрерывной интеграции, автоматизирующий как процесс разработки, так и процесс деплоймента. Он запускает автоматизированный рабочий процесс, упрощая отправку в хранилище. Codeship имеет базовую и pro-версию. Можно настраивать уровни доступа для членов команды в каждом проекте. Поддерживает шифрованное внешнее кэширование образов Docker, имеет отличный функционал отладки, включая возможность отладки прямо из среды непрерывной интеграции. Также у Codeship очень приятная панель инструментов.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Помимо того что BuildBot имеет открытый исходный код, он поддерживает single-source репозиторий, автоматизированную сборку и даже деплоймент, т. е., это централизованные CI/CD. BuildBot поставляется с поддержкой разнообразных платформ тестирования.&nbsp;</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Buildbot</h2><img class="img-fluid" src="assets/img/CD-CI/Buildbot.png" loading="lazy" style="padding-bottom: 20px;">
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://buildbot.net/" target="_blank">Buildbot</a>&nbsp;это фреймворк для сборки инструмента тестирования и непрерывной интеграции, автоматизирующий цикл компиляции/тестирования. Написан он на Python, является кроссплатформенным, имеет больше 3,7 тысяч звезд на GitHub. Этот фреймворк используется для валидации изменений во многих проектах, поскольку предлагает очень распределенное параллельное выполнение задач.</p>
+                    </div>
+                    <div class="block-heading" style="padding-top: 0px;">
+                        <h2 class="text-info">Полезные материалы</h2>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://habr.com/ru/companies/otus/articles/515078/" target="_blank">Что такое CI/CD</a>? Разбираемся с непрерывной интеграцией и непрерывной поставкой.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://mcs.mail.ru/blog/10-populyarnyh-instrumentov-dlya-ci-cd" target="_blank">10 популярных инструментов</a>&nbsp;для CI/CD.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;">Основы CI/CD. <a href="https://habr.com/ru/companies/southbridge/articles/691876/" target="_blank">Знакомство с Jenkins</a>.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://habr.com/ru/articles/498436/" target="_blank">Руководство по CI/CD</a>&nbsp;в GitLab для (почти) абсолютного новичка.</p>
+                        <p class="fs-6" style="text-align: justify;color: var(--bs-black);max-width: none;padding-bottom: 5px;"><a href="https://habr.com/ru/articles/242685/" target="_blank">Codeship.io</a>: бесплатный CI сервер для приватного репозитория Github/Bitbucket.</p>
+                        <div class="ratio ratio-16x9" style="margin-top: 10px;"><iframe src="https://www.youtube.com/embed/7S1ndRRht6M" allowfullscreen=""></iframe></div>
+                        <div class="ratio ratio-16x9" style="margin-top: 10px;"><iframe src="https://www.youtube.com/embed/RTT13l1XJ6c" allowfullscreen=""></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-5 justify-content-center">
+                <div class="col text-center align-self-center" data-bs-target="#navcol-1"><a class="text-nowrap" href="mailto:cckpsite@gmail.com" target="_blank"><i class="fab fa-google" style="padding-right: 10px;"></i>cckpsite@gmail.com</a></div>
+                <div class="col text-center align-self-center"><a href="https://vk.com/syrtsovnv" target="_blank"><i class="fab fa-vk" style="padding-right: 10px;"></i>syrtsovnv</a></div>
+                <div class="col text-center align-self-center"><a href="https://t.me/syrtsovnv" target="_blank"><i class="fab fa-telegram-plane" style="padding-right: 10px;"></i>syrtsovnv</a></div>
+            </div>
+        </div>
+        <div class="footer-copyright" style="margin-top: 30px;">
+            <p>© Оформление сайта. Н. В. Сырцов, 2023</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/One-Liner-Code-Editor-codeeditor.js"></script>
+</body>
+
+</html>
